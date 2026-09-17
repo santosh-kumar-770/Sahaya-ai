@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Telugu', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.telugu-text {
+  font-family: 'Noto Sans Telugu', 'Plus Jakarta Sans', system-ui, sans-serif;
+  line-height: 1.65;
+}
+
+/* Custom soundwave animations */
+@keyframes waveBars {
+  0% { height: 12px; }
+  50% { height: 42px; }
+  100% { height: 16px; }
+}
+
+.animate-bar-1 { animation: waveBars 0.9s ease-in-out infinite alternate; }
+.animate-bar-2 { animation: waveBars 0.7s ease-in-out infinite alternate 0.15s; }
+.animate-bar-3 { animation: waveBars 1.1s ease-in-out infinite alternate 0.3s; }
+.animate-bar-4 { animation: waveBars 0.8s ease-in-out infinite alternate 0.45s; }
+.animate-bar-5 { animation: waveBars 1.0s ease-in-out infinite alternate 0.2s; }
+.animate-bar-6 { animation: waveBars 0.6s ease-in-out infinite alternate 0.35s; }
+
+/* Subtle civic card shadow */
+.civic-card {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+}
+
+.civic-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.civic-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -4px rgba(15, 23, 42, 0.08), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
+}
